@@ -22,5 +22,11 @@ on:
       steps:
         -uses: actions/checkout@v4
         -name: Hello
-          run: echo "Hello World"
-          Shell: bash
+        run: echo "Hello World 1"
+        Shell: bash
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello World 2
+        runs: echo "Hello World 2"
+        shell: bash
