@@ -3,13 +3,12 @@ name: Hello World
 # Events
 
 on:
-  push
-    branches:
-        - Safia_github_workflows
-      -main
+  push:
+    branches :
+      -Safia_github_workflows
 
-      Pull_request:
-        branches:
+      Pull_request 
+        branches
           -main
 
   # Workflow_dispatch:
