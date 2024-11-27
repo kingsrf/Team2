@@ -19,6 +19,7 @@ h1:hover {
   color: #0049e7;
 }
 
+/* Navigation Bar */
 nav {
   background-color: #4CAF50;
   padding: 10px 0;
@@ -52,8 +53,7 @@ nav ul li a:hover {
 .img-container img {
   width: 300px;
   height: 200px;
-  border: 5px solid#008000;
-  color: #ffffff;
+  border: 5px solid #008000;
   border-radius: 20px;
   display: block;
   margin: 0 auto;
@@ -103,6 +103,8 @@ nav ul li a:hover {
 ul {
   text-align: bottom;
   padding: 0;
+  padding-top: 80px;
+  padding-bottom: 10px;
 }
 
 ul li {
@@ -122,4 +124,32 @@ ul li a {
 ul li a:hover {
   color: #0562af;
   text-shadow: 2px 2px 2px #04b583;
+}
+
+#equipmentListContainer {
+  display: none;
+}
+
+#toggleEquipmentBtn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #eef2f1;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-radius 0.5s ease;
+}
+
+#toggleEquipmentBtn:hover {
+  background-color: #ffffff;
+  color: #4caf50;
+  border-radius: 20px 20px;
+}
+
+#reservationFormContainer {
+  display: none;
+  text-align: center;
 }
