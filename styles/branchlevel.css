@@ -86,8 +86,8 @@ nav ul li a:hover {
 }
 
 .img-container p#alttext {
-  font-size: 24px;
-  color: #040e30;
+  font-size: 50px;
+  color: #5ee393;
   text-align: center;
   opacity: 0;
   visibility: hidden;
@@ -136,8 +136,8 @@ ul li a:hover {
   padding: 10px 20px;
   font-size: 16px;
   color: #eef2f1;
-  background-color: #4CAF50;
-  border: none;
+  background-color: #20a820;
+  border: 2px solid #5ee393;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-radius 0.5s ease;
@@ -152,4 +152,41 @@ ul li a:hover {
 #reservationFormContainer {
   display: none;
   text-align: center;
+}
+
+#fishRulesContainer {
+  padding: 1px;
+  max-width: 300px;
+  margin: 20px auto;
+  text-align: center;
+  box-shadow: 0 2px 4px #3d5353; /* Subtle shadow for depth */
+  transition: transform 0.5s ease-out, box-shadow 1s ease-out;
+}
+
+#fishRulesContainer:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 4px 8px #5ee393;
+}
+
+/* Styling for individual paragraphs */
+#fishRulesContainer p {
+  margin: 10px 0;
+}
+
+/* Styling for links */
+#fishRulesContainer a {
+  text-decoration: none;
+  color: #044b97;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 7px 10px;
+  border-radius: 13px;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out, border-color 0.3s ease-out;
+}
+
+#fishRulesContainer a:hover {
+  background-color: #4CAF50;
+  color: #ffffff;
+  border-color: #4CAF50;
 }

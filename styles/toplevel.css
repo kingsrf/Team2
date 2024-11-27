@@ -85,8 +85,8 @@ nav ul li a:hover {
 }
 
 .img-container p#alttext {
-  font-size: 24px;
-  color: #040e30;
+  font-size: 40px;
+  color: #5ee393;
   text-align: center;
   opacity: 0;
   visibility: hidden;
@@ -115,10 +115,10 @@ ul li a {
   color: #0a1a51;
   font-size: 18px;
   padding: 2px 10px;
-  transition: color 1s ease, text-shadow 1s ease;
+  transition: color 0.5s ease, text-shadow 0.5s ease;
 }
 
 ul li a:hover {
-  color: #0562af;
-  text-shadow: 2px 2px 2px #04b583;
+  color: #055393;
+  text-shadow: 2px 2px 2px #5ee393;
 }
