@@ -1,27 +1,61 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    <head>
-        <title>Welcome to the Wilderness!</title>
-        <link rel="stylesheet" type="text/css" href="styles/branchlevel.css">
-        <script src="scripts/myscripts.js"></script>
 
-    </head>
-    
-    <body>
-        <h1>Explore the Forest</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the Wilderness!</title>
+    <link rel="stylesheet" type="text/css" href="styles/branchlevel.css">
+    <script src="scripts/myscripts.js" defer></script>
+</head>
 
-        <figure class="img-container">
-            <img src = "images/forest.jpg" alt="Rampart Ridge" onmouseover="showAlt(this)" onmouseout="hideAlt(this)">
-            <figcaption>Level up your adventure in trails of towering trees!</figcaption>
+<body>
+    <h1>Explore the Forest</h1>
 
-            <p id="alttext" style="font-size:50px"> <p>
-        </figure>
+    <!-- Image container with hover functionality -->
+    <figure class="img-container">
+        <img src="images/forest.jpg" alt="Rampart Ridge" onmouseover="showAlt(this)" onmouseout="hideAlt(this)">
+        <figcaption>Level up your adventure in trails of towering trees!</figcaption>
+        <p id="alttext"></p>
+    </figure>
 
-        <ul>
-            <li><a href="index.html">Table of Contents</a></li>
+    <!-- Button to toggle equipment list -->
+    <button id="toggleEquipmentBtn" class="toggle-btn" type="button">Reserve Outdoor Equipment</button>
+
+    <!-- Hidden equipment list -->
+    <div id="equipmentListContainer">
+        <ul id="equipmentList">
+            <!-- The list will be populated by JavaScript -->
         </ul>
+    </div>
 
-    </body>
+    <div id="reservationFormContainer">
+        <h2>Reservation Form</h2>
+        <form id="reservationForm">
+            <label for="selectedItem">Selected Item:</label>
+            
+            <select id="selectedItem" required>
+                <option value="">Select an Item</option>
+            </select>
+            <br><br>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" min="1" required>
+            <br><br>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <br><br>
+
+            <button type="submit">Submit Reservation</button>
+        </form>
+    </div>
+    
+
+    <!-- Navigation links -->
+    <ul>
+        <li><a href="index.html">Table of Contents</a></li>
+    </ul>
+</body>
 
 </html>
