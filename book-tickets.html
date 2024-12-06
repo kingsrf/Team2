@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tickets</title>
+    <link rel="stylesheet" href="styles/style.css"> <!-- Link to your CSS -->
+</head>
+<body>
+    <h1>Book Your Ferry Tickets</h1>
+    <form action="submit-booking.php" method="post">
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="date">Travel Date:</label><br>
+        <input type="date" id="date" name="date" required><br><br>
+        
+        <label for="tickets">Number of Tickets:</label><br>
+        <input type="number" id="tickets" name="tickets" min="1" required><br><br>
+        
+        <button type="submit">Submit Booking</button>
+    </form>
+</body>
+</html>
