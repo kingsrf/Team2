@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Welcome to the Great Outdoors!</title>
-        <link rel="stylesheet" type="text/css" href="styles/branchlevel.css">
-        <script src="scripts/myscripts.js"></script>
-    </head>
-    
-    <body>
-        <h1>Retreat in the Park</h1>
 
-        <figure class="img-container">
-            <img src = "images/park.jpg" alt="Park" onmouseover="showAlt(this)" onmouseout="hideAlt(this)">
-            <figcaption>Read up! It's time to <em>leaf</em> your worries behind and enjoy the park</figcaption>
-            <p id="alttext"></p>
-        </figure>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the Great Outdoors!</title>
+    <link rel="stylesheet" type="text/css" href="styles/branchlevel.css">
+    <script src="scripts/myscripts.js"></script>
+</head>
 
-        <p>Experience the beauty of nature and breathtaking views at Ranger Falls Park</p>
-            <p>Our park offers a variety of ameneties to make your visit comfortable and enjoyable</p>
-                <ul>
-                    <li>Restroom</li>
+<body>
+    <h1>Retreat in the Park</h1>
 
-                    <li>picnic areas with tables</li>
-                    <li>Walking trails</li>
-                    <li>Playgrounds for kids</li>
-                    <li>parking facilities</li>
-                </ul>
+    <!-- Image container with hover functionality -->
+    <figure class="img-container">
+        <img src="images/park.jpg" alt="Park" onmouseover="showAlt(this)" onmouseout="hideAlt(this)">
+        <figcaption>Read up! It's time to <em>leaf</em> your worries behind and enjoy the park</figcaption>
+        <p id="alttext"></p>
+    </figure>
 
+    <!-- Paragraph about the park -->
+    <p>Experience the beauty of nature and breathtaking views at Ranger Falls Park.</p>
+    <p>Our park offers a variety of amenities to make your visit comfortable and enjoyable:</p>
 
-        <ul>
-            <li><a href="index.html">Table of Contents</a></li>
+    <!-- List of amenities -->
+    <ul>
+        <li>Restroom facilities</li>
+        <li>Picnic areas with tables</li>
+        <li>Walking trails</li>
+        <li>Playgrounds for kids</li>
+        <li>Parking facilities</li>
+    </ul>
 
-        </ul>
-
-    </body>
+    <!-- Navigation to Table of Contents -->
+    <ul>
+        <li><a href="index.html">Table of Contents</a></li>
+    </ul>
+</body>
 
 </html>

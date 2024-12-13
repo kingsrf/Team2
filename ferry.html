@@ -1,44 +1,60 @@
 <!DOCTYPE html>
-
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Welcome to the Great Outdoors!</title>
         <link rel="stylesheet" type="text/css" href="styles/branchlevel.css">
-        <script src="scripts/myscripts.js"></script>
+        <script src="scripts/myscripts.js" defer></script>
     </head>
     
     <body>
         <h1>A Ferry Expedition</h1>
 
+        <!-- Image and Caption -->
         <figure class="img-container">
-            <img src = "images/ferry.jpg" alt="ferry" onmouseover="showAlt(this)" onmouseout="hideAlt(this)">
+            <img 
+                src="images/ferry.jpg" 
+                alt="Ferry underway on calm waters with passengers on board" 
+                onmouseover="showAlt(this)" 
+                onmouseout="hideAlt(this)"
+            >
             <figcaption>Ferry underway on calm waters with passengers on board</figcaption>
             <p id="alttext"></p>
-       
-            <h2>Our Price List</h2>
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>Adult Ticket Price</th>
-                        <th>This is a singular price for Adults</th>
-                        <th>$13.45</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Children Ticket Prices</td>
-                        <td>High-quality product</td>
-                        <td>$10.00</td>
-                    </tr>
-                    <tr>
-                        <td>Group Ticket Discounts</td>
-                        <td>Group Tickets start 20+</td>
-                        <td>$12.00 per ticket</td>
-                    </tr>
         </figure>
+
+        <!-- Price List Table -->
+        <h2>Our Price List</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Ticket Type</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Adult Ticket</td>
+                    <td>Singular price for adults</td>
+                    <td>$13.45</td>
+                </tr>
+                <tr>
+                    <td>Children's Ticket</td>
+                    <td>High-quality experience for children</td>
+                    <td>$10.00</td>
+                </tr>
+                <tr>
+                    <td>Group Ticket Discounts</td>
+                    <td>Available for groups of 20 or more</td>
+                    <td>$12.00 per ticket</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Navigation -->
         <ul>
             <li><a href="index.html">Table of Contents</a></li>
         </ul>
-
     </body>
 </html>

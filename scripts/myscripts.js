@@ -1,4 +1,3 @@
-
 // Function to show alt text
 function showAlt(x) {
   document.getElementById("alttext").innerHTML = x.alt;
@@ -24,6 +23,7 @@ const equipmentList = [
 // Function to populate the dropdown for selecting items
 function populateDropdown() {
   const itemSelect = document.getElementById("selectedItem");
+  itemSelect.innerHTML = ""; // Clear existing options
   equipmentList.forEach((item) => {
     const option = document.createElement("option");
     option.value = item.name;
@@ -44,19 +44,23 @@ function populateEquipmentList() {
   });
 }
 
-// Toggle the visibility of the equipment list
-const toggleBtn = document.getElementById("toggleEquipmentBtn");
-toggleBtn.addEventListener("click", () => {
+// Handle toggle for Equipment List and Reservation Form
+function toggleEquipmentAndForm() {
+  const formContainer = document.getElementById("reservationFormContainer");
   const listContainer = document.getElementById("equipmentListContainer");
-  if (listContainer.style.display === "none" || !listContainer.style.display) {
+  const toggleBtn = document.getElementById("toggleEquipmentBtn");
+
+  if (listContainer.style.display === "none" || listContainer.style.display === "") {
     listContainer.style.display = "block";
-    populateEquipmentList(); // Populate the list on display
-    toggleBtn.textContent = "Hide Equipment List";
+    populateEquipmentList(); // Populate the list
+    formContainer.style.display = "block";
+    toggleBtn.textContent = "Close Form";
   } else {
     listContainer.style.display = "none";
+    formContainer.style.display = "none";
     toggleBtn.textContent = "Reserve Your Equipment Here";
   }
-});
+}
 
 // Handle form submission
 document.getElementById("reservationForm").addEventListener("submit", function (e) {
@@ -73,6 +77,11 @@ document.getElementById("reservationForm").addEventListener("submit", function (
 
   if (isNaN(quantity) || quantity <= 0) {
     alert("Please enter a valid quantity.");
+    return;
+  }
+
+  if (!name) {
+    alert("Please enter your name.");
     return;
   }
 
@@ -97,28 +106,12 @@ document.getElementById("reservationForm").addEventListener("submit", function (
   document.getElementById("reservationForm").reset();
 });
 
-// Handle toggle for Equipment List and Reservation Form
-document.getElementById("toggleEquipmentBtn").addEventListener("click", () => {
-  const formContainer = document.getElementById("reservationFormContainer");
-  const listContainer = document.getElementById("equipmentListContainer");
+// Initialize the app
+function initialize() {
+  populateDropdown();
+  populateEquipmentList();
+  document.getElementById("toggleEquipmentBtn").addEventListener("click", toggleEquipmentAndForm);
+}
 
-  // Toggle Equipment List
-  if (listContainer.style.display === "none" || listContainer.style.display === "") {
-      listContainer.style.display = "block";
-      populateEquipmentList(); // Populate the list
-  } else {
-      listContainer.style.display = "none";
-  }
-
-  // Show Reservation Form
-  if (formContainer.style.display === "none" || formContainer.style.display === "") {
-      formContainer.style.display = "block";
-      toggleBtn.textContent = "Close Form";
-  } else {
-      formContainer.style.display = "none";
-      toggleBtn.textContent = "Reserve Your Equipment Here";
-  }
-});
-
-// Initialize the dropdown on page load
-populateDropdown();
+// Run initialization on page load
+initialize();

@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Welcome to the Great Outdoors!</title>
-        <link rel="stylesheet" type="text/css" href="styles/branchlevel.css">
-        <script src="scripts/myscripts.js"></script>
-    </head>
-    
-    <body>
-        <h1>Climb the Mountain!</h1>
 
-        <figure class="img-container">
-            <img src = "images/mountain.jpg" alt="Mount Rainier" onmouseover="showAlt(this)" onmouseout="hideAlt(this)">
-            <figcaption>Rope up! this mountains <em>knot</em> climbing itself</figcaption>
-            <p id="alttext"></p>
-        </figure>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the Great Outdoors!</title>
+    <link rel="stylesheet" type="text/css" href="styles/branchlevel.css">
+    <script src="scripts/myscripts.js" defer></script>
+</head>
 
-        <img src="images/MtRainerScene1.jpeg" alt="">
-        <img src="images/MtRainerScene2.jpeg" alt=""> 
-        <img src="images/MtRainerScene3.jpeg" alt="">
-        
+<body>
+    <h1>Climb the Mountain!</h1>
 
-        <ul>
-            <li><a href="index.html">Table of Contents</a></li>
-        </ul>
+    <!-- Image container with hover functionality -->
+    <figure class="img-container">
+        <img src="images/mountain.jpg" alt="Mount Rainier" onmouseover="showAlt(this)" onmouseout="hideAlt(this)">
+        <figcaption>Rope up! this mountains <em>knot</em> climbing itself</figcaption>
+        <p id="alttext"></p>
+    </figure>
 
-    </body>
+    <!-- Additional mountain scene images -->
+    <img src="images/MtRainerScene1.jpeg" alt="">
+    <img src="images/MtRainerScene2.jpeg" alt="">
+    <img src="images/MtRainerScene3.jpeg" alt="">
+
+    <!-- Navigation to Table of Contents -->
+    <ul>
+        <li><a href="index.html">Table of Contents</a></li>
+    </ul>
+</body>
 
 </html>
